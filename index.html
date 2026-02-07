@@ -88,8 +88,8 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
-          <div class="is-size-5 publication-authors">
+          <h1 class="title is-1 publication-title">TODO: Edit here</h1>
+          <!-- <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
             <span class="author-block">
@@ -109,17 +109,17 @@
             <span class="author-block">
               <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
             </span>
-          </div>
+          </div> -->
 
-          <div class="is-size-5 publication-authors">
+          <!-- <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>University of Washington,</span>
             <span class="author-block"><sup>2</sup>Google Research</span>
-          </div>
+          </div> -->
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://arxiv.org/pdf/2011.12948"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -127,7 +127,7 @@
                   </span>
                   <span>Paper</span>
                 </a>
-              </span>
+              </span> -->
               <span class="link-block">
                 <a href="https://arxiv.org/abs/2011.12948"
                    class="external-link button is-normal is-rounded is-dark">
@@ -158,7 +158,7 @@
                   </a>
               </span>
               <!-- Dataset Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://github.com/google/nerfies/releases/tag/0.1"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -166,7 +166,7 @@
                   </span>
                   <span>Data</span>
                   </a>
-            </div>
+            </div> -->
 
           </div>
         </div>
@@ -175,7 +175,7 @@
   </div>
 </section>
 
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
@@ -189,58 +189,244 @@
       </h2>
     </div>
   </div>
+</section> -->
+
+
+<!-- Give comparing result -->
+
+<div class="section-header has-text-centered mb-5">
+  <h2 class="title">Simulation Experiments</h2>
+  <p class="subtitle">Our method can generate simulation-ready digital twins for highly cluttered scene.</p>
+  <p>We compare our result with two baselines: (1) SAM3D+ICP; (2) Holoscene.</p>
+  <p>The scene is simulated under <strong>gravity</strong> using <strong>PyBullet</strong>.</p>
+  <p>The scene is <strong>dynamically consistent</strong> and enable downstream robotics manipulation.</p>
+</div>
+
+
+<section id="simulations" class="hero teaser">
+  <div class="container is-max-desktop">
+
+    <div class="video-item mb-6">
+      <video autoplay muted loop playsinline style="width:100%; height:auto;">
+        <source src="Assets/Sim_videos/video_google5.mp4" type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered mt-2"><p>Google Scanned Objects Scene 1</p></h2>
+    </div>
+
+    <div class="video-item mb-6">
+      <video autoplay muted loop playsinline style="width:100%; height:auto;">
+        <source src="Assets/Sim_videos/video_google7.mp4" type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered mt-2"><p>Google Scanned Objects Scene 2</p></h2>
+    </div>
+
+    <div class="video-item mb-6">
+      <video autoplay muted loop playsinline style="width:100%; height:auto;">
+        <source src="Assets/Sim_videos/video_google21.mp4" type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered mt-2"><p>Google Scanned Objects Scene 3</p></h2>
+    </div>
+
+    <div class="video-item mb-6">
+      <video autoplay muted loop playsinline style="width:100%; height:auto;">
+        <source src="Assets/Sim_videos/video_ycb6.mp4" type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered mt-2"><p>YCB Scene 1</p></h2>
+    </div>
+
+    <div class="video-item mb-6">
+      <video autoplay muted loop playsinline style="width:100%; height:auto;">
+        <source src="Assets/Sim_videos/video_ycb19.mp4" type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered mt-2"><p>YCB Scene 2</p></h2>
+    </div>
+
+    <div class="video-item mb-6">
+      <video autoplay muted loop playsinline style="width:100%; height:auto;">
+        <source src="Assets/Sim_videos/video_ycb21.mp4" type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered mt-2"><p>YCB Scene 3</p></h2>
+    </div>
+  </div>
 </section>
 
 
+<!-- TODO： Give real world experiments results -->
+<div class="section-header has-text-centered mb-5">
+  <h2 class="title">Real World Experiments</h2>
+  <p class="subtitle"> The reconstructed scene is simulation-ready for <strong>robotics contact-rich manipulation</strong>.</p>
+  <p>Our method only need a single RGB-D image to reconstruct a dynamically consistent scene.</p>
+  <p>An identifical trajectory is replayed in both real world and reconstructed scene using <strong>PyBullet</strong>.</p>
+</div>
+
+
+
+
+<section id="Real_world" class="hero teaser">
+  <div class="container is-max-desktop">
+
+    <div class="video-item mb-6">
+      <video autoplay muted loop playsinline style="width:100%; height:auto;">
+        <source src="Assets/Real_videos/Real_sim_toy4K_1.mp4" type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered mt-2"><p>A scene created by Toy4K. We reconstruct and simulate with gravity</p></h2>
+    </div>
+
+    <div class="video-item mb-6">
+      <video autoplay muted loop playsinline style="width:100%; height:auto;">
+        <source src="Assets/Real_videos/real_pushing_toy4K_1.mp4" type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered mt-2"><p>Replay the same robotics trajectory in the simulation environment</p></h2>
+    </div>
+</section>
+
+
+
+<section id="Real_world" class="hero teaser">
+  <div class="container is-max-desktop">
+
+    <div class="video-item mb-6">
+      <video autoplay muted loop playsinline style="width:100%; height:auto;">
+        <source src="Assets/Real_videos/Real_sim_google4.mp4" type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered mt-2"><p>A scene created by Google Scanned Objects. We reconstruct and simulate with gravity</p></h2>
+    </div>
+
+    <div class="video-item mb-6">
+      <video autoplay muted loop playsinline style="width:100%; height:auto;">
+        <source src="Assets/Real_videos/real_pushing_google4.mp4" type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered mt-2"><p>Replay the same robotics trajectory in the simulation environment</p></h2>
+    </div>
+
+</section>
+
+
+
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Visual Effects</h2>
+          <p>
+            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
+            would be impossible without nerfies since it would require going through a wall.
+          </p>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="Assets/Real_videos/Real_sim_toy4K_3.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+
+      <!-- Matting. -->
+      <div class="column">
+        <h2 class="title is-3">Matting</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              As a byproduct of our method, we can also solve the matting problem by ignoring
+              samples that fall outside of a bounding box during rendering.
+            </p>
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="Assets/Real_videos/real_pushing_toy4K_3.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+
+<!-- TODO： Give simulation experiments results -->
+<div class="section-header has-text-centered mb-5">
+  <h2 class="title">More simulation examples</h2>
+</div>
+
+<!-- TODO: YCB scenes more examples -->
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
+      <h2 class="title is-3">More examples of scenes using YCB dataset</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-steve">
           <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
+            <source src="./Assets/More_demos/ycb5/stacked.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-chair-tp">
           <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
+            <source src="./Assets/More_demos/ycb13/stacked.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-shiba">
           <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
+            <source src="./Assets/More_demos/ycb20/stacked.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-fullbody">
           <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
+            <source src="./Assets/More_demos/ycb1/stacked.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-blueshirt">
           <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
+            <source src="./Assets/More_demos/ycb6/stacked.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./Assets/More_demos/ycb7/stacked.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./Assets/More_demos/ycb8/stacked.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./Assets/More_demos/ycb9/stacked.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./Assets/More_demos/ycb11/stacked.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./Assets/More_demos/ycb12/stacked.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./Assets/More_demos/ycb15/stacked.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./Assets/More_demos/ycb16/stacked.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./Assets/More_demos/ycb15/stacked.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -249,6 +435,48 @@
   </div>
 </section>
 
+
+
+<!-- TODO: Google scanned objects more examples -->
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">More examples of scenes using Google Scanned Objects</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./Assets/More_demos/google12/stacked.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./Assets/More_demos/google17/stacked.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./Assets/More_demos/google13/stacked.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./Assets/More_demos/google15/stacked.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./Assets/More_demos/google14/stacked.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="section">
   <div class="container is-max-desktop">
