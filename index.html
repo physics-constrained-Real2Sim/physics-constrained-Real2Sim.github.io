@@ -261,96 +261,83 @@
 
 
 
+<section id="Real_world" class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
 
-<section id="Real_world" class="hero teaser">
-  <div class="container is-max-desktop">
+      <h2 class="title is-3">Real-world Scene and Simulation Replay</h2>
 
-    <div class="video-item mb-6">
-      <video autoplay muted loop playsinline style="width:100%; height:auto;">
-        <source src="Assets/Real_videos/Real_sim_toy4K_1.mp4" type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered mt-2"><p>A scene created by Toy4K. We reconstruct and simulate with gravity</p></h2>
-    </div>
+      <div class="columns is-vcentered">
 
-    <div class="video-item mb-6">
-      <video autoplay muted loop playsinline style="width:100%; height:auto;">
-        <source src="Assets/Real_videos/real_pushing_toy4K_1.mp4" type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered mt-2"><p>Replay the same robotics trajectory in the simulation environment</p></h2>
-    </div>
-</section>
-
-
-
-<section id="Real_world" class="hero teaser">
-  <div class="container is-max-desktop">
-
-    <div class="video-item mb-6">
-      <video autoplay muted loop playsinline style="width:100%; height:auto;">
-        <source src="Assets/Real_videos/Real_sim_google4.mp4" type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered mt-2"><p>A scene created by Google Scanned Objects. We reconstruct and simulate with gravity</p></h2>
-    </div>
-
-    <div class="video-item mb-6">
-      <video autoplay muted loop playsinline style="width:100%; height:auto;">
-        <source src="Assets/Real_videos/real_pushing_google4.mp4" type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered mt-2"><p>Replay the same robotics trajectory in the simulation environment</p></h2>
-    </div>
-
-</section>
-
-
-
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="50%">
-            <source src="Assets/Real_videos/Real_sim_toy4K_3.mp4"
-                    type="video/mp4">
+        <!-- Simulation -->
+        <div class="column is-6">
+          <h3 class="title is-5 has-text-centered">Simulation under gravity</h3>
+          <video autoplay muted loop playsinline width="100%">
+            <source src="Assets/Real_videos/Real_sim_toy4K_1.mp4" type="video/mp4">
           </video>
+          <p class="subtitle is-6 has-text-centered mt-2">
+            A scene using Toy4K dataset.
+          </p>
         </div>
-      </div>
-      <!--/ Visual Effects. -->
 
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="50%">
-              <source src="Assets/Real_videos/real_pushing_toy4K_3.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
+        <!-- Pushing -->
+        <div class="column is-6">
+          <h3 class="title is-5 has-text-centered">Simulation with pushing trajectory</h3>
+          <video autoplay muted loop playsinline width="100%">
+            <source src="Assets/Real_videos/real_pushing_toy4K_1.mp4" type="video/mp4">
+          </video>
+          <p class="subtitle is-6 has-text-centered mt-2">
+            Replaying the franka trajectory in simulator
+          </p>
         </div>
+
       </div>
+
+      <div class="columns is-vcentered">
+
+        <!-- Simulation -->
+        <div class="column is-6">
+          <h3 class="title is-5 has-text-centered">Simulation under gravity</h3>
+          <video autoplay muted loop playsinline width="100%">
+            <source src="Assets/Real_videos/Real_sim_google4.mp4" type="video/mp4">
+          </video>
+          <p class="subtitle is-6 has-text-centered mt-2">
+            A scene using Google Scanned Objects dataset.
+          </p>
+        </div>
+
+        <!-- Pushing -->
+        <div class="column is-6">
+          <h3 class="title is-5 has-text-centered">Simulation with pushing trajectory</h3>
+          <video autoplay muted loop playsinline width="100%">
+            <source src="Assets/Real_videos/real_pushing_google4.mp4" type="video/mp4">
+          </video>
+          <p class="subtitle is-6 has-text-centered mt-2">
+            Replaying the franka trajectory in simulator
+          </p>
+        </div>
+
+      </div>
+
     </div>
-    
+  </div>
+</section>
+
+
+
+
 
 <!-- TODO： Give simulation experiments results -->
 <div class="section-header has-text-centered mb-5">
   <h2 class="title">More simulation examples</h2>
 </div>
 
+
 <!-- TODO: YCB scenes more examples -->
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">More examples of scenes using YCB dataset</h2>
+      <h2 class="title is-3">Scenes using YCB dataset</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-steve">
           <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
@@ -441,7 +428,7 @@
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">More examples of scenes using Google Scanned Objects</h2>
+      <h2 class="title is-3">scenes using Google Scanned Objects</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-steve">
           <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
@@ -477,6 +464,78 @@
     </div>
   </div>
 </section>
+
+
+
+<div class="section-header has-text-centered mb-5">
+  <h2 class="title">More Real-world examples</h2>
+</div>
+    
+
+
+<section id="Real_world" class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+
+      <h2 class="title is-3">Real-world Scene and Simulation Replay</h2>
+
+      <div class="columns is-vcentered">
+
+        <!-- Simulation -->
+        <div class="column is-6">
+          <h3 class="title is-5 has-text-centered">Simulation under gravity</h3>
+          <video autoplay muted loop playsinline width="100%">
+            <source src="Assets/Real_videos/Real_sim_toy4K_3.mp4" type="video/mp4">
+          </video>
+          <p class="subtitle is-6 has-text-centered mt-2">
+            A scene using Toy4K dataset.
+          </p>
+        </div>
+
+        <!-- Pushing -->
+        <div class="column is-6">
+          <h3 class="title is-5 has-text-centered">Simulation with pushing trajectory</h3>
+          <video autoplay muted loop playsinline width="100%">
+            <source src="Assets/Real_videos/real_pushing_toy4K_3.mp4" type="video/mp4">
+          </video>
+          <p class="subtitle is-6 has-text-centered mt-2">
+            Replaying the franka trajectory in simulator
+          </p>
+        </div>
+
+      </div>
+
+      <div class="columns is-vcentered">
+
+        <!-- Simulation -->
+        <div class="column is-6">
+          <h3 class="title is-5 has-text-centered">Simulation under gravity</h3>
+          <video autoplay muted loop playsinline width="100%">
+            <source src="Assets/Real_videos/Real_sim_toy4K_4.mp4" type="video/mp4">
+          </video>
+          <p class="subtitle is-6 has-text-centered mt-2">
+            A scene using Toy4K dataset.
+          </p>
+        </div>
+
+        <!-- Pushing -->
+        <div class="column is-6">
+          <h3 class="title is-5 has-text-centered">Simulation with pushing trajectory</h3>
+          <video autoplay muted loop playsinline width="100%">
+            <source src="Assets/Real_videos/real_pushing_toy4K_4.mp4" type="video/mp4">
+          </video>
+          <p class="subtitle is-6 has-text-centered mt-2">
+            Replaying the franka trajectory in simulator
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 
 <section class="section">
   <div class="container is-max-desktop">
