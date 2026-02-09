@@ -195,16 +195,22 @@
   </div>
 </section>
 
+<div class="columns is-centered">
+  <div class="container is-max-desktop">
+    <figure style="max-width: 500px; margin: 0 auto;">
+      <img src="./Assets/spotlight.png" alt="spotlight">
+    </figure>
+  </div>
+</div>
 
 
 <!-- Give comparing result -->
 <section>
   <div class="section-header has-text-centered mb-5">
     <h2 class="title">Simulation Experiments</h2>
-    <p class="subtitle">Our method can generate simulation-ready digital twins for highly cluttered scene.</p>
+    <p class="subtitle">Our method can generate physically consistent digital scenes for highly cluttered scene.</p>
     <p>We compare our result with two baselines: (1) SAM3D+ICP; (2) Holoscene.</p>
-    <p>The scene is simulated under <strong>gravity</strong> using <strong>PyBullet</strong>.</p>
-    <p>The scene is <strong>dynamically consistent</strong> and enable downstream robotics manipulation.</p>
+    <p>The reconstructed scene is simulated under gravity using PyBullet.</p>
   </div>
 </section>
 
@@ -261,9 +267,9 @@
 <!-- TODO： Give real world experiments results -->
 <div class="section-header has-text-centered mb-5">
   <h2 class="title">Real World Experiments</h2>
-  <p class="subtitle"> The reconstructed scene is simulation-ready for <strong>robotics contact-rich manipulation</strong>.</p>
-  <p>Our method only need a single RGB-D image to reconstruct a dynamically consistent scene.</p>
-  <p>An identifical trajectory is replayed in both real world and reconstructed scene using <strong>PyBullet</strong>.</p>
+  <p class="subtitle"> Our method can adapt real-world environments and enable simulations with contact-rich manipulation</strong>.</p>
+  <p>Our method only needs a single RGB-D image to reconstruct complete and dynamically consistent scenes.</p>
+  <p>A same trajectory is executed in real-world and replayed in the reconstructed scenes.</p>
 </div>
 
 
@@ -271,8 +277,6 @@
 <section id="Real_world" class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
-
-      <h2 class="title is-3">Real-world Scene and Simulation Replay</h2>
 
       <div class="columns is-vcentered">
 
@@ -283,7 +287,7 @@
             <source src="Assets/Real_videos/Real_sim_toy4K_1.mp4" type="video/mp4">
           </video>
           <p class="subtitle is-6 has-text-centered mt-2">
-            A scene using Toy4K dataset.
+             Real-world Toy4K scene 1.
           </p>
         </div>
 
@@ -309,7 +313,7 @@
             <source src="Assets/Real_videos/Real_sim_google4.mp4" type="video/mp4">
           </video>
           <p class="subtitle is-6 has-text-centered mt-2">
-            A scene using Google Scanned Objects dataset.
+             Real-world Google Scanned Objects scene 1.
           </p>
         </div>
 
@@ -335,7 +339,7 @@
             <source src="Assets/Real_videos/Real_sim_toy4K_3.mp4" type="video/mp4">
           </video>
           <p class="subtitle is-6 has-text-centered mt-2">
-            A scene using Toy4K dataset.
+            Real-world Toy4K scene 2.
           </p>
         </div>
 
@@ -361,7 +365,7 @@
             <source src="Assets/Real_videos/Real_sim_toy4K_4.mp4" type="video/mp4">
           </video>
           <p class="subtitle is-6 has-text-centered mt-2">
-            A scene using Toy4K dataset.
+            Real-world Toy4K scene 3.
           </p>
         </div>
 
@@ -377,8 +381,6 @@
         </div>
 
       </div>
-
-    </div>
   </div>
 </section>
 
@@ -487,7 +489,7 @@
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">scenes using Google Scanned Objects</h2>
+      <h2 class="title is-3">Scenes using Google Scanned Objects</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-steve">
           <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
