@@ -42,6 +42,7 @@
 </head>
 <body>
 
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 
 <section class="hero">
@@ -49,7 +50,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">TODO: Edit here</h1>
+          <h1 class="title is-1 publication-title">Real-to-Sim for Highly Cluttered Environments via Physics-Consistent Inter-Object Reasoning</h1>
           <!-- <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
@@ -110,7 +111,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/physics-constrained-Real2Sim/physics-constrained-Real2Sim"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -153,6 +154,7 @@
 </section> -->
 
 
+<section class="mb-6">
 
 <section>
   <div class="container is-max-desktop">
@@ -194,14 +196,8 @@
     <!--/ Abstract. -->
   </div>
 </section>
+</section>
 
-<div class="columns is-centered">
-  <div class="container is-max-desktop">
-    <figure style="max-width: 500px; margin: 0 auto;">
-      <img src="./Assets/spotlight.png" alt="spotlight">
-    </figure>
-  </div>
-</div>
 
 
 <!-- Give comparing result -->
@@ -273,7 +269,7 @@
 </div>
 
 
-
+<section class="mb-6">
 <section id="Real_world" class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
@@ -383,15 +379,17 @@
       </div>
   </div>
 </section>
+</section>
 
 
 
 
-
+<section class="mb-6">
 <!-- TODO： Give simulation experiments results -->
 <div class="section-header has-text-centered mb-5">
   <h2 class="title">More simulation examples</h2>
 </div>
+</section>
 
 
 <!-- TODO: YCB scenes more examples -->
@@ -527,7 +525,50 @@
 </section>
 
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Methodology -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Methodology</h2>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <figure class="image">
+          <img 
+            src="./Assets/method.png" 
+            alt="Method overview" 
+            style="max-width: 100%; height: auto;">
+              <p class="caption">
+                <strong>Method Overview.</strong>
+                Our physics-constrained Real2Sim pipeline consists of four stages.
+                (a) <strong>Initial Reconstruction:</strong> Given a single RGB-D image <span class="math">\(I_t\)</span>
+                and instance masks <span class="math">\(M_t\)</span>, we obtain an initial estimation of objects
+                geometry and appearance <span class="math">\(\theta\)</span> using SAM3D and ICP pose refinement.
+                (b) <strong>Contact Graph Construction:</strong> We construct a contact graph
+                <span class="math">\(cg = (pt, E)\)</span>, where parse tree <span class="math">\(pt\)</span>
+                represents the supporting tree and edges <span class="math">\(E\)</span> encode proximal
+                relationships between objects.
+                (c) <strong>Two-Stage Physics-Constrained Optimization:</strong> Guided by the contact graph,
+                we optimize object properties in two stages. First, a geometry-aware optimization introduces
+                SDF-based contact constraints and visual regularization to globally refine object poses,
+                producing a penetration-free and contact-consistent initialization. Second, a hierarchical
+                physics-constrained optimization, guided by the sequence of parse tree, uses differentiable
+                simulation to jointly refine initial pose and physical parameters of each object for long-horizon
+                physical stability.
+                (d) <strong>Photometric Refinement:</strong> As a final post-process, object textures are refined
+                using a differentiable renderer to achieve photometric consistency.
+              </p>
+        </figure>
+      </div>
+    </div>
+    <!-- Video Placeholder -->
 
+    <!-- /Video Placeholder -->
+    <!-- /Methodology -->
+  </div>
+</section>
 
 
 
