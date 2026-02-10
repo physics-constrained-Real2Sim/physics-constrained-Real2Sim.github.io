@@ -164,31 +164,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+Reconstructing physically valid 3D scenes from single-view observations is a prerequisite for bridging the gap between visual perception and robotic control. However, in scenarios requiring precise contact reasoning, such as robotic manipulation in highly cluttered environments, geometric fidelity alone is insufficient. Standard perception pipelines often neglect physical constraints, resulting in invalid states, e.g., floating objects or severe inter-penetration, rendering downstream simulation unreliable. To address these limitations, we propose a novel physics-constrained Real-to-Sim pipeline that reconstructs dynamically consistent 3D scenes from single-view RGB-D data. Central to our approach is a differentiable optimization pipeline that explicitly models spatial dependencies via a contact graph, jointly refining object poses and physical properties through differentiable rigid-body simulation. Extensive evaluations in both simulation and real-world settings demonstrate that our reconstructed scenes achieve high physical fidelity and faithfully replicate real-world contact dynamics, enabling stable and reliable contact-rich manipulation. 
           </p>
         </div>
       </div>
@@ -205,7 +181,7 @@
   <div class="section-header has-text-centered mb-5">
     <h2 class="title">Simulation Experiments</h2>
     <p class="subtitle">Our method can generate physically consistent digital scenes for highly cluttered scene.</p>
-    <p>We compare our result with two baselines: (1) SAM3D+ICP; (2) Holoscene.</p>
+    <p>We compare our result with two baselines: (1) SAM3D+ICP; (2) HoloScene.</p>
     <p>The reconstructed scene is simulated under gravity using PyBullet.</p>
   </div>
 </section>
@@ -219,42 +195,42 @@
       <video autoplay muted loop playsinline style="width:100%; height:auto;">
         <source src="Assets/Sim_videos/video_google5.mp4" type="video/mp4">
       </video>
-      <h2 class="subtitle has-text-centered mt-2"><p>Google Scanned Objects Scene 1</p></h2>
+      <h2 class="subtitle has-text-centered mt-2"><p>Google Scanned Objects Scene 1.</p></h2>
     </div>
 
     <div class="video-item mb-6">
       <video autoplay muted loop playsinline style="width:100%; height:auto;">
         <source src="Assets/Sim_videos/video_google7.mp4" type="video/mp4">
       </video>
-      <h2 class="subtitle has-text-centered mt-2"><p>Google Scanned Objects Scene 2</p></h2>
+      <h2 class="subtitle has-text-centered mt-2"><p>Google Scanned Objects Scene 2.</p></h2>
     </div>
 
     <div class="video-item mb-6">
       <video autoplay muted loop playsinline style="width:100%; height:auto;">
         <source src="Assets/Sim_videos/video_google21.mp4" type="video/mp4">
       </video>
-      <h2 class="subtitle has-text-centered mt-2"><p>Google Scanned Objects Scene 3</p></h2>
+      <h2 class="subtitle has-text-centered mt-2"><p>Google Scanned Objects Scene 3.</p></h2>
     </div>
 
     <div class="video-item mb-6">
       <video autoplay muted loop playsinline style="width:100%; height:auto;">
         <source src="Assets/Sim_videos/video_ycb6.mp4" type="video/mp4">
       </video>
-      <h2 class="subtitle has-text-centered mt-2"><p>YCB Scene 1</p></h2>
+      <h2 class="subtitle has-text-centered mt-2"><p>YCB Scene 1.</p></h2>
     </div>
 
     <div class="video-item mb-6">
       <video autoplay muted loop playsinline style="width:100%; height:auto;">
         <source src="Assets/Sim_videos/video_ycb19.mp4" type="video/mp4">
       </video>
-      <h2 class="subtitle has-text-centered mt-2"><p>YCB Scene 2</p></h2>
+      <h2 class="subtitle has-text-centered mt-2"><p>YCB Scene 2.</p></h2>
     </div>
 
     <div class="video-item mb-6">
       <video autoplay muted loop playsinline style="width:100%; height:auto;">
         <source src="Assets/Sim_videos/video_ycb21.mp4" type="video/mp4">
       </video>
-      <h2 class="subtitle has-text-centered mt-2"><p>YCB Scene 3</p></h2>
+      <h2 class="subtitle has-text-centered mt-2"><p>YCB Scene 3.</p></h2>
     </div>
   </div>
 </section>
@@ -262,7 +238,7 @@
 
 <!-- TODO： Give real world experiments results -->
 <div class="section-header has-text-centered mb-5">
-  <h2 class="title">Real World Experiments</h2>
+  <h2 class="title">Real-world Experiments</h2>
   <p class="subtitle"> Our method can adapt real-world environments and enable simulations with contact-rich manipulation</strong>.</p>
   <p>Our method only needs a single RGB-D image to reconstruct complete and dynamically consistent scenes.</p>
   <p>A same trajectory is executed in real-world and replayed in the reconstructed scenes.</p>
@@ -278,7 +254,7 @@
 
         <!-- Simulation -->
         <div class="column is-6">
-          <h3 class="title is-5 has-text-centered">Simulation under gravity</h3>
+          <h3 class="title is-5 has-text-centered">Simulation under Gravity</h3>
           <video autoplay muted loop playsinline width="100%">
             <source src="Assets/Real_videos/Real_sim_toy4K_1.mp4" type="video/mp4">
           </video>
@@ -289,12 +265,12 @@
 
         <!-- Pushing -->
         <div class="column is-6">
-          <h3 class="title is-5 has-text-centered">Simulation with pushing trajectory</h3>
+          <h3 class="title is-5 has-text-centered">Simulation with Pushing Trajectory</h3>
           <video autoplay muted loop playsinline width="100%">
             <source src="Assets/Real_videos/real_pushing_toy4K_1.mp4" type="video/mp4">
           </video>
           <p class="subtitle is-6 has-text-centered mt-2">
-            Replaying the franka trajectory in simulator
+            Replaying the Franka robot trajectory in simulator.
           </p>
         </div>
 
@@ -304,7 +280,7 @@
 
         <!-- Simulation -->
         <div class="column is-6">
-          <h3 class="title is-5 has-text-centered">Simulation under gravity</h3>
+          <h3 class="title is-5 has-text-centered">Simulation under Gravity</h3>
           <video autoplay muted loop playsinline width="100%">
             <source src="Assets/Real_videos/Real_sim_google4.mp4" type="video/mp4">
           </video>
@@ -315,12 +291,12 @@
 
         <!-- Pushing -->
         <div class="column is-6">
-          <h3 class="title is-5 has-text-centered">Simulation with pushing trajectory</h3>
+          <h3 class="title is-5 has-text-centered">Simulation with Pushing Trajectory</h3>
           <video autoplay muted loop playsinline width="100%">
             <source src="Assets/Real_videos/real_pushing_google4.mp4" type="video/mp4">
           </video>
           <p class="subtitle is-6 has-text-centered mt-2">
-            Replaying the franka trajectory in simulator
+            Replaying the Franka robot trajectory in simulator.
           </p>
         </div>
 
@@ -330,7 +306,7 @@
 
         <!-- Simulation -->
         <div class="column is-6">
-          <h3 class="title is-5 has-text-centered">Simulation under gravity</h3>
+          <h3 class="title is-5 has-text-centered">Simulation under Gravity</h3>
           <video autoplay muted loop playsinline width="100%">
             <source src="Assets/Real_videos/Real_sim_toy4K_3.mp4" type="video/mp4">
           </video>
@@ -341,12 +317,12 @@
 
         <!-- Pushing -->
         <div class="column is-6">
-          <h3 class="title is-5 has-text-centered">Simulation with pushing trajectory</h3>
+          <h3 class="title is-5 has-text-centered">Simulation with Pushing Trajectory</h3>
           <video autoplay muted loop playsinline width="100%">
             <source src="Assets/Real_videos/real_pushing_toy4K_3.mp4" type="video/mp4">
           </video>
           <p class="subtitle is-6 has-text-centered mt-2">
-            Replaying the franka trajectory in simulator
+            Replaying the Franka robot trajectory in simulator.
           </p>
         </div>
 
@@ -356,7 +332,7 @@
 
         <!-- Simulation -->
         <div class="column is-6">
-          <h3 class="title is-5 has-text-centered">Simulation under gravity</h3>
+          <h3 class="title is-5 has-text-centered">Simulation under Gravity</h3>
           <video autoplay muted loop playsinline width="100%">
             <source src="Assets/Real_videos/Real_sim_toy4K_4.mp4" type="video/mp4">
           </video>
@@ -367,12 +343,12 @@
 
         <!-- Pushing -->
         <div class="column is-6">
-          <h3 class="title is-5 has-text-centered">Simulation with pushing trajectory</h3>
+          <h3 class="title is-5 has-text-centered">Simulation with Pushing Trajectory</h3>
           <video autoplay muted loop playsinline width="100%">
             <source src="Assets/Real_videos/real_pushing_toy4K_4.mp4" type="video/mp4">
           </video>
           <p class="subtitle is-6 has-text-centered mt-2">
-            Replaying the franka trajectory in simulator
+            Replaying the Franka robot trajectory in simulator.
           </p>
         </div>
 
@@ -387,7 +363,7 @@
 <section class="mb-6">
 <!-- TODO： Give simulation experiments results -->
 <div class="section-header has-text-centered mb-5">
-  <h2 class="title">More simulation examples</h2>
+  <h2 class="title">More Simulation Examples</h2>
 </div>
 </section>
 
@@ -396,7 +372,7 @@
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Scenes using YCB dataset</h2>
+      <h2 class="title is-3">Scenes using YCB Dataset</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-steve">
           <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
@@ -487,7 +463,7 @@
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Scenes using Google Scanned Objects</h2>
+      <h2 class="title is-3">Scenes using Google Scanned Objects Dataset</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-steve">
           <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
