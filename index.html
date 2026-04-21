@@ -42,6 +42,70 @@
 </head>
 <body>
 
+  <style>
+  .real2sim2real-block {
+    margin-top: 1.5rem;
+  }
+
+  .media-card {
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    height: 100%;
+  }
+
+  .media-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  .media-card-content {
+    padding: 0;
+    background: #f8f9fb;
+  }
+
+  .result-video {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+
+  .image-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    padding: 1rem;
+  }
+
+  .input-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: contain;
+    background: white;
+  }
+
+  .media-caption {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #555;
+    padding: 0.85rem 1rem 1rem;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .media-caption {
+      font-size: 0.9rem;
+    }
+  }
+</style>
+
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 
@@ -90,15 +154,15 @@
                   <span>Paper</span>
                 </a>
               </span> -->
-              <!-- <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2602.12633"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span> -->
+              </span>
               <!-- Video Link. -->
               <!-- <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
@@ -232,14 +296,20 @@ Reconstructing physically valid 3D scenes from single-view observations is a pre
       </video>
       <h2 class="subtitle has-text-centered mt-2"><p>YCB Scene 3.</p></h2>
     </div>
+    <div class="video-item mb-6">
+      <video autoplay muted loop playsinline style="width:100%; height:auto;">
+        <source src="Assets/Sim_videos/video_ycb22.mp4" type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered mt-2"><p>YCB Scene 4.</p></h2>
+    </div>
   </div>
 </section>
 
 
 <!-- TODO： Give real world experiments results -->
 <div class="section-header has-text-centered mb-5">
-  <h2 class="title">Real-world Experiments</h2>
-  <p class="subtitle"> Our method can adapt real-world environments and enable simulations with contact-rich manipulation</strong>.</p>
+  <h2 class="title">Real-world Experiments: Interaction Prediction</h2>
+  <p class="subtitle"> Our method can adapt real-world environments and enable interaction prediction with contact-rich manipulation</strong>.</p>
   <p>Our method only needs a single RGB-D image to reconstruct complete and dynamically consistent scenes.</p>
   <p>A same trajectory is executed in real-world and replayed in the reconstructed scenes.</p>
 </div>
@@ -357,6 +427,104 @@ Reconstructing physically valid 3D scenes from single-view observations is a pre
 </section>
 </section>
 
+<div class="section-header has-text-centered mb-5">
+  <h2 class="title">Real-world Experiments: Real2Sim2Real Decluttering</h2>
+  <p class="subtitle">Our physically consistent scenes enable decluttering strategies designed in simulation environments to be transferred to real-world scenarios.</strong></p>
+</div>
+
+<!--insert Assets/Real_videos/Real2Sim2Real_decluttering.mp4  -->
+<!--along with Assets/Real_videos/real_rgb_input.png -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="section-header has-text-centered mb-5">
+      <h2 class="title">Real-world Experiments: Real2Sim2Real Decluttering</h2>
+      <p class="subtitle">
+        Our physically consistent scenes enable decluttering strategies designed in simulation environments to be transferred to real-world scenarios.
+      </p>
+    </div>
+
+    <div class="columns is-variable is-6 is-vcentered real2sim2real-block">
+
+      <!-- Video -->
+      <div class="column is-7">
+        <div class="media-card">
+          <div class="media-card-content">
+            <video
+              class="result-video"
+              controls
+              autoplay
+              muted
+              loop
+              playsinline
+            >
+              <source src="Assets/Real_videos/Real2Sim2Real_decluttering.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p class="media-caption">Real-world decluttering result</p>
+        </div>
+      </div>
+
+      <!-- RGB Input Image -->
+      <div class="column is-5">
+        <div class="media-card">
+          <div class="media-card-content image-center">
+            <img
+              src="Assets/Real_videos/real_rgb_input.png"
+              alt="Real-world RGB input"
+              class="input-image"
+            >
+          </div>
+          <p class="media-caption">Input RGB</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+    <div class="columns is-variable is-6 is-vcentered real2sim2real-block">
+
+      <!-- Video -->
+      <div class="column is-7">
+        <div class="media-card">
+          <div class="media-card-content">
+            <video
+              class="result-video"
+              controls
+              autoplay
+              muted
+              loop
+              playsinline
+            >
+              <source src="Assets/Real_videos/declutter_video_sim.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p class="media-caption">A board resting on two cans: decluttering result</p>
+        </div>
+      </div>
+
+      <!-- RGB Input Image -->
+      <div class="column is-5">
+        <div class="media-card">
+          <div class="media-card-content image-center">
+            <img
+              src="Assets/Real_videos/BGR.png"
+              alt="Real-world RGB input"
+              class="input-image"
+            >
+          </div>
+          <p class="media-caption">Input RGB</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
 
